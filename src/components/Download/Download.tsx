@@ -7,7 +7,7 @@ const Download = () => {
 
       <div className="flex flex-row justify-center">
         <a
-          className={'underline font-bold'}
+          className={'underline font-bold mr-[24px]'}
           href='https://github.com/Nintondo/extension/releases/download/0.1.0/chrome-0.1.0.zip'
         >
           Chrome Extension
