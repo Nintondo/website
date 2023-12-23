@@ -1,18 +1,14 @@
-const WalletInfo = () => {
+const About = () => {
   return (
-    <div className='w-full mx-auto text-lg text-white'>
-      <h2 className='text-4xl font-bold mb-4'>Wallet</h2>
-      <p>Nintondo Wallet for Bells - A New Horizon for Your Crypto Adventures!</p>
-      <p>🌿 Version 0.1.0 - Bringing the Charm of Animal Crossing to Cryptocurrency</p>
-      <p>🍃 Welcome to Nintondo Wallet! 🍃</p>
-      <p>
+    <div className='w-full mx-auto text-lg text-white min-h-[100vh] h-[fit-content] flex flex-col justify-center align-center snap-start' id='about'>
+      <h2 className='text-center font-bold text-[24px] mt-[18px] mb-[24px]'>🍃 Welcome to Nintondo Wallet! 🍃</h2>
+      <p className='text-center mb-[80px]'>
         We're thrilled to introduce Nintondo Wallet, your newest companion in the whimsical world of
         Bells cryptocurrency. Inspired by the beloved universe of Animal Crossing, our wallet is
         more than just a tool; it's a delightful journey into the heart of a community where fun
         meets finance.
       </p>
-      <br />
-      <p>🌸 Key Features:</p>
+      <h3>🌸 Key Features:</h3>
       <ul className={'list-disc'}>
         <li>
           <p>
@@ -74,48 +70,8 @@ const WalletInfo = () => {
         </li>
       </ul>
       <br />
-      <p>🌟 Join Our Community:</p>
-      <p>
-        Step into a world where your financial journey is intertwined with the charm and simplicity
-        of Animal Crossing. Join our community, share tips, and make new friends, all while managing
-        your Bells cryptocurrency. Let's create a community as heartwarming and supportive as the
-        townsfolk of Animal Crossing!
-      </p>
-      {/*list-disc pl-4*/}
-      <br />
-      <p className={'font-bold'}>📥 Download Now:</p> <br />
-      <p>
-        <a
-          className={'underline'}
-          href='https://github.com/Nintondo/extension/releases/download/0.1.0/chrome-0.1.0.zip'
-        >
-          Chrome Extension
-        </a>
-      </p>
-      <br /> <br />
-      <p>
-        <a
-          className={'underline'}
-          href={'https://github.com/Nintondo/extension/releases/download/0.1.0/firefox-0.1.0.xpi'}
-        >
-          Firefox Extension
-        </a>
-      </p>
-      <br /> <br />
-      <p>
-        Ready to embark on this enchanting crypto adventure? Download Nintondo Wallet for Bells and
-        turn your cryptocurrency experience into an idyllic escapade. Let's make our financial
-        journey not just profitable, but also delightful!
-      </p>
-      <p>
-        Note: Nintondo Wallet is not affiliated with Nintendo or the Animal Crossing franchise.
-        Bells is a meme cryptocurrency and should be enjoyed as part of a balanced financial
-        portfolio.
-      </p>
-      <br />
-      <p>Happy Bell Hunting! 🛎️</p>
     </div>
   );
 };
 
-export default WalletInfo;
+export default About;

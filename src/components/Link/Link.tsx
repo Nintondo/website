@@ -14,6 +14,7 @@ const Link = ({ href, text, className }: LinkProps) => {
         textDecorationColor: '#FBBF24',
         textDecorationThickness: '2px',
         textUnderlineOffset: '8px',
+        width: 'fit-content'
       }}
     >
       {text.toUpperCase()}

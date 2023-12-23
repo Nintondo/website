@@ -41,8 +41,10 @@ export const footerContent = [
 ];
 
 export const buttons = [
-  { text: 'Wallet', svg: NewWalletIcon, url: '#wallet' },
+  { text: 'About', svg: NewWalletIcon, url: '#about' },
+  { text: 'Download', svg: Market, url: '#download' },
   { text: 'Markets', svg: Market, url: '#markets' },
+  { text: 'Community', svg: Market, url: '#community' },
   { text: 'Explorer', svg: Explorer, url: 'https://bells.quark.blue/' },
 ];
 

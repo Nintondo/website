@@ -20,7 +20,6 @@
 
 .main_screen {
   min-height:100vh;
-  margin-top: -100px;
   display: flex;
   align-items: center;
   justify-content: center;
