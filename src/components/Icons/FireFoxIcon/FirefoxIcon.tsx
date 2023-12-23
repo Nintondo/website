@@ -9,94 +9,94 @@ const FirefoxIcon: React.FC<IProps> = ({height, width}) => {
         <title>Firefox Browser logo</title>
         <defs>
          <linearGradient id="a" x1="70.79" x2="6.447" y1="12.39" y2="74.47" gradientTransform="translate(-1.3 -.004086)" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#fff44f" offset=".048"/>
-          <stop stop-color="#ffe847" offset=".111"/>
-          <stop stop-color="#ffc830" offset=".225"/>
-          <stop stop-color="#ff980e" offset=".368"/>
-          <stop stop-color="#ff8b16" offset=".401"/>
-          <stop stop-color="#ff672a" offset=".462"/>
-          <stop stop-color="#ff3647" offset=".534"/>
-          <stop stop-color="#e31587" offset=".705"/>
+          <stop stopColor="#fff44f" offset=".048"/>
+          <stop stopColor="#ffe847" offset=".111"/>
+          <stop stopColor="#ffc830" offset=".225"/>
+          <stop stopColor="#ff980e" offset=".368"/>
+          <stop stopColor="#ff8b16" offset=".401"/>
+          <stop stopColor="#ff672a" offset=".462"/>
+          <stop stopColor="#ff3647" offset=".534"/>
+          <stop stopColor="#e31587" offset=".705"/>
          </linearGradient>
          <radialGradient id="b" cx="-7907" cy="-8515" r="80.8" gradientTransform="translate(7974,8524)" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#ffbd4f" offset=".129"/>
-          <stop stop-color="#ffac31" offset=".186"/>
-          <stop stop-color="#ff9d17" offset=".247"/>
-          <stop stop-color="#ff980e" offset=".283"/>
-          <stop stop-color="#ff563b" offset=".403"/>
-          <stop stop-color="#ff3750" offset=".467"/>
-          <stop stop-color="#f5156c" offset=".71"/>
-          <stop stop-color="#eb0878" offset=".782"/>
-          <stop stop-color="#e50080" offset=".86"/>
+          <stop stopColor="#ffbd4f" offset=".129"/>
+          <stop stopColor="#ffac31" offset=".186"/>
+          <stop stopColor="#ff9d17" offset=".247"/>
+          <stop stopColor="#ff980e" offset=".283"/>
+          <stop stopColor="#ff563b" offset=".403"/>
+          <stop stopColor="#ff3750" offset=".467"/>
+          <stop stopColor="#f5156c" offset=".71"/>
+          <stop stopColor="#eb0878" offset=".782"/>
+          <stop stopColor="#e50080" offset=".86"/>
          </radialGradient>
          <radialGradient id="c" cx="-7937" cy="-8482" r="80.8" gradientTransform="translate(7974,8524)" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#960e18" offset=".3"/>
-          <stop stop-color="#b11927" stop-opacity=".74" offset=".351"/>
-          <stop stop-color="#db293d" stop-opacity=".343" offset=".435"/>
-          <stop stop-color="#f5334b" stop-opacity=".094" offset=".497"/>
-          <stop stop-color="#ff3750" stop-opacity="0" offset=".53"/>
+          <stop stopColor="#960e18" offset=".3"/>
+          <stop stopColor="#b11927" stopOpacity=".74" offset=".351"/>
+          <stop stopColor="#db293d" stopOpacity=".343" offset=".435"/>
+          <stop stopColor="#f5334b" stopOpacity=".094" offset=".497"/>
+          <stop stopColor="#ff3750" stopOpacity="0" offset=".53"/>
          </radialGradient>
          <radialGradient id="d" cx="-7927" cy="-8533" r="58.53" gradientTransform="translate(7974,8524)" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#fff44f" offset=".132"/>
-          <stop stop-color="#ffdc3e" offset=".252"/>
-          <stop stop-color="#ff9d12" offset=".506"/>
-          <stop stop-color="#ff980e" offset=".526"/>
+          <stop stopColor="#fff44f" offset=".132"/>
+          <stop stopColor="#ffdc3e" offset=".252"/>
+          <stop stopColor="#ff9d12" offset=".506"/>
+          <stop stopColor="#ff980e" offset=".526"/>
          </radialGradient>
          <radialGradient id="e" cx="-7946" cy="-8461" r="38.47" gradientTransform="translate(7974,8524)" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#3a8ee6" offset=".353"/>
-          <stop stop-color="#5c79f0" offset=".472"/>
-          <stop stop-color="#9059ff" offset=".669"/>
-          <stop stop-color="#c139e6" offset="1"/>
+          <stop stopColor="#3a8ee6" offset=".353"/>
+          <stop stopColor="#5c79f0" offset=".472"/>
+          <stop stopColor="#9059ff" offset=".669"/>
+          <stop stopColor="#c139e6" offset="1"/>
          </radialGradient>
          <radialGradient id="f" cx="-7936" cy="-8492" r="20.4" gradientTransform="matrix(.972 -.235 .275 1.138 10090 7834)" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#9059ff" stop-opacity="0" offset=".206"/>
-          <stop stop-color="#8c4ff3" stop-opacity=".064" offset=".278"/>
-          <stop stop-color="#7716a8" stop-opacity=".45" offset=".747"/>
-          <stop stop-color="#6e008b" stop-opacity=".6" offset=".975"/>
+          <stop stopColor="#9059ff" stopOpacity="0" offset=".206"/>
+          <stop stopColor="#8c4ff3" stopOpacity=".064" offset=".278"/>
+          <stop stopColor="#7716a8" stopOpacity=".45" offset=".747"/>
+          <stop stopColor="#6e008b" stopOpacity=".6" offset=".975"/>
          </radialGradient>
          <radialGradient id="g" cx="-7938" cy="-8518" r="27.68" gradientTransform="translate(7974,8524)" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#ffe226" offset="0"/>
-          <stop stop-color="#ffdb27" offset=".121"/>
-          <stop stop-color="#ffc82a" offset=".295"/>
-          <stop stop-color="#ffa930" offset=".502"/>
-          <stop stop-color="#ff7e37" offset=".732"/>
-          <stop stop-color="#ff7139" offset=".792"/>
+          <stop stopColor="#ffe226" offset="0"/>
+          <stop stopColor="#ffdb27" offset=".121"/>
+          <stop stopColor="#ffc82a" offset=".295"/>
+          <stop stopColor="#ffa930" offset=".502"/>
+          <stop stopColor="#ff7e37" offset=".732"/>
+          <stop stopColor="#ff7139" offset=".792"/>
          </radialGradient>
          <radialGradient id="h" cx="-7916" cy="-8536" r="118.1" gradientTransform="translate(7974,8524)" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#fff44f" offset=".113"/>
-          <stop stop-color="#ff980e" offset=".456"/>
-          <stop stop-color="#ff5634" offset=".622"/>
-          <stop stop-color="#ff3647" offset=".716"/>
-          <stop stop-color="#e31587" offset=".904"/>
+          <stop stopColor="#fff44f" offset=".113"/>
+          <stop stopColor="#ff980e" offset=".456"/>
+          <stop stopColor="#ff5634" offset=".622"/>
+          <stop stopColor="#ff3647" offset=".716"/>
+          <stop stopColor="#e31587" offset=".904"/>
          </radialGradient>
          <radialGradient id="i" cx="-7927" cy="-8523" r="86.5" gradientTransform="matrix(.105 .995 -.653 .069 -4685 8470)" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#fff44f" offset="0"/>
-          <stop stop-color="#ffe847" offset=".06"/>
-          <stop stop-color="#ffc830" offset=".168"/>
-          <stop stop-color="#ff980e" offset=".304"/>
-          <stop stop-color="#ff8b16" offset=".356"/>
-          <stop stop-color="#ff672a" offset=".455"/>
-          <stop stop-color="#ff3647" offset=".57"/>
-          <stop stop-color="#e31587" offset=".737"/>
+          <stop stopColor="#fff44f" offset="0"/>
+          <stop stopColor="#ffe847" offset=".06"/>
+          <stop stopColor="#ffc830" offset=".168"/>
+          <stop stopColor="#ff980e" offset=".304"/>
+          <stop stopColor="#ff8b16" offset=".356"/>
+          <stop stopColor="#ff672a" offset=".455"/>
+          <stop stopColor="#ff3647" offset=".57"/>
+          <stop stopColor="#e31587" offset=".737"/>
          </radialGradient>
          <radialGradient id="j" cx="-7938" cy="-8508" r="73.72" gradientTransform="translate(7974,8524)" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#fff44f" offset=".137"/>
-          <stop stop-color="#ff980e" offset=".48"/>
-          <stop stop-color="#ff5634" offset=".592"/>
-          <stop stop-color="#ff3647" offset=".655"/>
-          <stop stop-color="#e31587" offset=".904"/>
+          <stop stopColor="#fff44f" offset=".137"/>
+          <stop stopColor="#ff980e" offset=".48"/>
+          <stop stopColor="#ff5634" offset=".592"/>
+          <stop stopColor="#ff3647" offset=".655"/>
+          <stop stopColor="#e31587" offset=".904"/>
          </radialGradient>
          <radialGradient id="k" cx="-7919" cy="-8504" r="80.69" gradientTransform="translate(7974,8524)" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#fff44f" offset=".094"/>
-          <stop stop-color="#ffe141" offset=".231"/>
-          <stop stop-color="#ffaf1e" offset=".509"/>
-          <stop stop-color="#ff980e" offset=".626"/>
+          <stop stopColor="#fff44f" offset=".094"/>
+          <stop stopColor="#ffe141" offset=".231"/>
+          <stop stopColor="#ffaf1e" offset=".509"/>
+          <stop stopColor="#ff980e" offset=".626"/>
          </radialGradient>
          <linearGradient id="l" x1="70.01" x2="15.27" y1="12.06" y2="66.81" gradientTransform="translate(-1.3 -.004086)" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#fff44f" stop-opacity=".8" offset=".167"/>
-          <stop stop-color="#fff44f" stop-opacity=".634" offset=".266"/>
-          <stop stop-color="#fff44f" stop-opacity=".217" offset=".489"/>
-          <stop stop-color="#fff44f" stop-opacity="0" offset=".6"/>
+          <stop stopColor="#fff44f" stopOpacity=".8" offset=".167"/>
+          <stop stopColor="#fff44f" stopOpacity=".634" offset=".266"/>
+          <stop stopColor="#fff44f" stopOpacity=".217" offset=".489"/>
+          <stop stopColor="#fff44f" stopOpacity="0" offset=".6"/>
          </linearGradient>
         </defs>
         <g transform="matrix(.9819843 0 0 .9819843 .6974849 .7199239)">
