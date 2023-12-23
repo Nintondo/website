@@ -3,7 +3,7 @@ import Button from "../Button/Button";
 
 const PageLinks = () => {
     return (
-        <div className='flex justify-center py-1 sticky top-[16px] max-w-[100vw] mb-[50vh] sm:hidden md:flex'>
+        <div className='flex justify-center py-1 sticky top-[16px] max-w-[100vw] mb-[180px] sm:hidden md:flex'>
         {buttons.map((button, index) => (
           <Button
             key={index}

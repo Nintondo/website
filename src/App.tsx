@@ -8,6 +8,9 @@ import Community from './components/Community/Community.tsx';
 import { Markets } from './components/Markets/Markets.tsx';
 import PageLinks from './components/PageLinks/PageLinks.tsx';
 import DownChevron from './components/Icons/DownChevron/DownChevron.tsx';
+import DownloadLink from './components/DownloadLink/DownloadLink.tsx';
+import ChromeIcon from './components/Icons/ChomeIcon/ChromeIcon.tsx';
+import FirefoxIcon from './components/Icons/FireFoxIcon/FirefoxIcon.tsx';
 
 const App = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -22,13 +25,25 @@ const App = () => {
   return (
     <div className='App'>
       <div
-        className={'app-container bg-black pt-[200px] px-[24px] snap-y sm:bg-[length:auto_100vh] lg:bg-[length:100vw_1380px]'}
+        className={'app-container bg-black pt-[36px] px-[24px] snap-y sm:bg-[length:auto_100vh] lg:bg-[length:auto_1380px]'}
         style={{ backgroundPosition: `center -${scrollY + 10}px`}}
       >
-          <div className='sm:mb-[40vh] lg:mb-24'>
+          <PageLinks />
+          <div className='mb-[32px]'>
             <Text />
           </div>
-          <PageLinks />
+          <div className='flex justify-between text-white sm:mb-[40vh] lg:mb-[80vh] px-[8px] max-w-[540px] mx-[auto] gap-[24px]'>
+            <DownloadLink 
+              text="Chrome extension" 
+              href="https://github.com/Nintondo/extension/releases/download/0.1.0/chrome-0.1.0.zip"
+              icon={<ChromeIcon height={48} width={48}/>}
+            />
+            <DownloadLink 
+              text="Firefox extension" 
+              href="https://github.com/Nintondo/extension/releases/download/0.1.0/firefox-0.1.0.xpi" 
+              icon={<FirefoxIcon height={48} width={48}/>}
+            />
+          </div>
           <div className="lg:hidden sticky flex justify-center bottom-[48px]" style={{opacity: 1 - scrollY  / 100}}>
             <DownChevron /> 
           </div>
