@@ -8,10 +8,19 @@ import Exit from '../../assets/exit.svg?react';
 import ArrowRight from '../../assets/arrowright.svg?react';
 import ArrowLeft from '../../assets/arrowleft.svg?react';
 import { useState } from 'react';
-const WalletInfo = () => {
+
+interface WalletInfoProps {
+    gitInfo: {
+        assets: {
+            browser_download_url: string;
+        }[]
+        tag_name: string;
+        body: string;
+    } | null
+}
+const WalletInfo = ({gitInfo}:WalletInfoProps) => {
   const walletImages = [wallet1, wallet2, wallet3, wallet4, wallet5, wallet6];
   const [modalImage, setModalImage] = useState<string>('');
-
   const changeImage = (direction: string) => {
     const currentImageIndex = walletImages.indexOf(modalImage);
     const totalImages = walletImages.length;
@@ -32,7 +41,7 @@ const WalletInfo = () => {
     <div className='w-full mx-auto text-lg text-white'>
       <h2 className='text-4xl font-bold mb-4'>Wallet</h2>
       <p>Nintondo Wallet for Bells - A New Horizon for Your Crypto Adventures!</p>
-      <p>🌿 Version 0.1.1 - Bringing the Charm of Animal Crossing to Cryptocurrency</p>
+      <p>🌿 Version {gitInfo?.tag_name} - Bringing the Charm of Animal Crossing to Cryptocurrency</p>
       <p>🍃 Welcome to Nintondo Wallet! 🍃</p>
       <p>
         We're thrilled to introduce Nintondo Wallet, your newest companion in the whimsical world of
@@ -75,26 +84,16 @@ const WalletInfo = () => {
         </li>
       </ul>
       <br />
-      <p>🍂 What's New in 0.1.1:</p>
-      <ul className={'pl-4 list-disc'}>
-        <li>
-          <p>Removed tidecoin leftovers</p>
-        </li>
-        <li>
-          <p>Removed host permission from manifest</p>
-        </li>
-        <li>
-          <p>Changed api provider to receive last bells price</p>
-        </li>
-        <li>
-          <p>Added error handling for pushing txs</p>
-        </li>
-        <li>
-          <p>Fixed keyring's bugs</p>
-        </li>
-      </ul>
-      <br />
-      <p>🌟 Join Our Community:</p>
+      <p>🍂 What's New in {gitInfo?.tag_name}:</p>
+        <div className={"mb-[20px]"}>
+      {gitInfo && gitInfo.body.includes('### CHANGELOG:') && gitInfo.body.includes('\n#### ATTENTION:') ?
+        gitInfo.body.split('### CHANGELOG:')[1].split('\n#### ATTENTION:')[0].split('\n').filter(change => change.trim().length > 0).map((change, index) => (
+            // <li key={index}>
+            <p key={index}>{change}</p>
+        // </li>
+      ))
+      : null}
+        </div>
       <p>
         Step into a world where your financial journey is intertwined with the charm and simplicity
         of Animal Crossing. Join our community, share tips, and make new friends, all while managing
@@ -106,7 +105,7 @@ const WalletInfo = () => {
       <p>
         <a
           className={'underline'}
-          href='https://github.com/Nintondo/extension/releases/download/0.1.1/chrome-0.1.1.zip'
+          href={gitInfo?.assets[0].browser_download_url}
         >
           Chrome Extension
         </a>
@@ -115,7 +114,7 @@ const WalletInfo = () => {
       <p>
         <a
           className={'underline'}
-          href={'https://github.com/Nintondo/extension/releases/download/0.1.1/firefox-0.1.1.xpi'}
+          href={gitInfo?.assets[1].browser_download_url}
         >
           Firefox Extension
         </a>

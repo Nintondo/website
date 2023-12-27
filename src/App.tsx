@@ -2,13 +2,29 @@ import './App.css';
 import Header from './components/Header/Header';
 import Text from './components/Text/Text';
 // import Footer from './components/Footer/Footer.tsx';
-import { buttons, linksData } from './settings/settings.ts';
+import {buttons, linksData} from './settings/settings.ts';
 import { Fragment, useEffect, useState } from 'react';
 import WalletInfo from './components/WalletInfo/WalletInfo.tsx';
 import DownloadLink from './components/DownloadLink/DownloadLink.tsx';
+import axios from "axios";
 
 const App = () => {
   const [scrollY, setScrollY] = useState(0);
+  const [gitInfo, setGitInfo] = useState(null);
+  const fetchGit = async () => {
+    await axios
+        .get("https://api.github.com/repos/Nintondo/extension/releases/latest")
+        .then((response) => {
+          setGitInfo(response.data)
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+  }
+
+  useEffect(() => {
+    fetchGit();
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -29,7 +45,7 @@ const App = () => {
           </div>
 
           <div className='flex text-white gap-[24px] flex-wrap justify-center'>
-            {buttons.map((button, index) => (
+            {gitInfo && buttons(gitInfo).map((button, index) => (
               <DownloadLink
                 key={index}
                 text={button.text}
@@ -47,7 +63,7 @@ const App = () => {
             className='w-[1080px] mx-auto py-[30px]'
             id={'wallet'}
           >
-            <WalletInfo />
+            <WalletInfo gitInfo={gitInfo}/>
           </div>
         </div>
         <div className={'flex-wrap flex'}>

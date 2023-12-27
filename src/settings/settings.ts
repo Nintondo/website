@@ -39,19 +39,21 @@ export const footerContent = [
   },
 ];
 
-export const buttons = [
-  {
-    text: 'Chrome extension',
-    svg: ChromeIcon,
-    url: 'https://github.com/Nintondo/extension/releases/download/0.1.1/chrome-0.1.1.zip',
-  },
-  {
-    text: 'Firefox extension',
-    svg: FirefoxIcon,
-    url: 'https://github.com/Nintondo/extension/releases/download/0.1.1/firefox-0.1.1.xpi',
-  },
-];
-
+export const buttons = (data: {assets: {browser_download_url: string}[]}) =>
+  [
+    {
+      text: 'Chrome extension',
+      svg: ChromeIcon,
+      // url: 'https://github.com/Nintondo/extension/releases/download/0.1.1/chrome-0.1.1.zip',
+      url: data.assets[0].browser_download_url,
+    },
+    {
+      text: 'Firefox extension',
+      svg: FirefoxIcon,
+      // url: 'https://github.com/Nintondo/extension/releases/download/0.1.1/firefox-0.1.1.xpi',
+      url: data.assets[1].browser_download_url,
+    },
+  ]
 export const linksData = [
   {
     type: 'CEX',
