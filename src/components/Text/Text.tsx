@@ -1,21 +1,20 @@
+import BellsIcon from '../../assets/bells.svg?react';
 const Text = () => {
   return (
-    <div className={'text-white flex flex-col items-center'}>
-      <span className='bg-black text-center mb-8 text-[40px] px-[20px] relative'>
-        Cryptocurrency based on the game{' '}
-        <span className={' text-regal-yellow'}>Animal Crossing</span>
-        <div className='absolute right-0 bottom-0 w-4 h-14 bg-yellow-500'></div>
-      </span>
+    <div className={'text-center text-white flex flex-col items-center'}>
+      <div className='mb-8 text-[40px] md:justify-center relative'>
+        <span className={'pl-[10px] rounded-l-[8px] bg-black'}>A secure wallet to store </span>
+        <span className={'pr-[35px] rounded-r-[8px] bg-black text-regal-yellow relative'}>
+          Bells
+          <BellsIcon className={'absolute right-0 bottom-2'} />
+        </span>
+      </div>
 
-      <span className='w500px bg-black font-inconsolata text-[20px] px-2 my-1 relative'>
-        Mine <span className='text-yellow-500'>Bells</span> into Nintondo{' '}
-        <span className={'text-regal-blue'}>wallet</span>,{' '}
-        <span className={'text-regal-blue'}>exchange</span> them for other
-      </span>
-
-      <span className='bg-black'>
-        cryptocurrencies and track them with <span className={'text-regal-blue'}>explorer</span>.
-      </span>
+      <div className='text-[20px] md:flex md:justify-center md:flex-col items-center'>
+        <div className='inline bg-black px-[5px] mb-[5px] rounded-[8px]'>
+          <span>Store. Exchange. Transact. Mine. Explore.</span>
+        </div>
+      </div>
     </div>
   );
 };

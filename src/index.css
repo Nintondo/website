@@ -5,12 +5,3 @@
 :root {
 	font-family: Inconsolata, serif;
 }
-
-.full-screen {
-	min-height: 100vh; /* Full viewport height */
-	width: 100vw; /* Full viewport width */
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-  }

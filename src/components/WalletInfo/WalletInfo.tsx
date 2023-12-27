@@ -1,9 +1,38 @@
+import wallet1 from '../../assets/walletScreens/wallet1.jpg';
+import wallet2 from '../../assets/walletScreens/wallet2.jpg';
+import wallet3 from '../../assets/walletScreens/wallet3.jpg';
+import wallet4 from '../../assets/walletScreens/wallet4.jpg';
+import wallet5 from '../../assets/walletScreens/wallet5.jpg';
+import wallet6 from '../../assets/walletScreens/wallet6.jpg';
+import Exit from '../../assets/exit.svg?react';
+import ArrowRight from '../../assets/arrowright.svg?react';
+import ArrowLeft from '../../assets/arrowleft.svg?react';
+import { useState } from 'react';
 const WalletInfo = () => {
+  const walletImages = [wallet1, wallet2, wallet3, wallet4, wallet5, wallet6];
+  const [modalImage, setModalImage] = useState<string>('');
+
+  const changeImage = (direction: string) => {
+    const currentImageIndex = walletImages.indexOf(modalImage);
+    const totalImages = walletImages.length;
+    const newIndex =
+      (currentImageIndex + (direction === 'next' ? 1 : totalImages - 1)) % totalImages;
+    setModalImage(walletImages[newIndex]);
+  };
+
+  const handleImageClick = (image: string) => {
+    setModalImage(image);
+  };
+
+  const closeModal = () => {
+    setModalImage('');
+  };
+
   return (
     <div className='w-full mx-auto text-lg text-white'>
       <h2 className='text-4xl font-bold mb-4'>Wallet</h2>
       <p>Nintondo Wallet for Bells - A New Horizon for Your Crypto Adventures!</p>
-      <p>🌿 Version 0.1.0 - Bringing the Charm of Animal Crossing to Cryptocurrency</p>
+      <p>🌿 Version 0.1.1 - Bringing the Charm of Animal Crossing to Cryptocurrency</p>
       <p>🍃 Welcome to Nintondo Wallet! 🍃</p>
       <p>
         We're thrilled to introduce Nintondo Wallet, your newest companion in the whimsical world of
@@ -13,7 +42,7 @@ const WalletInfo = () => {
       </p>
       <br />
       <p>🌸 Key Features:</p>
-      <ul className={'list-disc'}>
+      <ul className={'pl-4 list-disc'}>
         <li>
           <p>
             Village Marketplace: Just like your favorite Animal Crossing marketplace, trade and
@@ -46,31 +75,22 @@ const WalletInfo = () => {
         </li>
       </ul>
       <br />
-      <p>🍂 What's New in 0.1.0:</p>
-      <ul className={'list-disc'}>
+      <p>🍂 What's New in 0.1.1:</p>
+      <ul className={'pl-4 list-disc'}>
         <li>
-          <p>
-            Launch of Nintondo Wallet: A fresh start with a familiar feel for all Bells enthusiasts
-            and Animal Crossing fans.
-          </p>
+          <p>Removed tidecoin leftovers</p>
         </li>
         <li>
-          <p>
-            Enhanced UI: Navigate with ease through a user-friendly interface, adorned with charming
-            Animal Crossing aesthetics.
-          </p>
+          <p>Removed host permission from manifest</p>
         </li>
         <li>
-          <p>
-            Improved Transaction Speed: Swift as a balloon gift floating across the sky, our
-            enhanced transaction system ensures quick and efficient processing.
-          </p>
+          <p>Changed api provider to receive last bells price</p>
         </li>
         <li>
-          <p>
-            Community Events: Participate in special events and challenges, bringing together the
-            community spirit of Animal Crossing.
-          </p>
+          <p>Added error handling for pushing txs</p>
+        </li>
+        <li>
+          <p>Fixed keyring's bugs</p>
         </li>
       </ul>
       <br />
@@ -81,13 +101,12 @@ const WalletInfo = () => {
         your Bells cryptocurrency. Let's create a community as heartwarming and supportive as the
         townsfolk of Animal Crossing!
       </p>
-      {/*list-disc pl-4*/}
       <br />
       <p className={'font-bold'}>📥 Download Now:</p> <br />
       <p>
         <a
           className={'underline'}
-          href='https://github.com/Nintondo/extension/releases/download/0.1.0/chrome-0.1.0.zip'
+          href='https://github.com/Nintondo/extension/releases/download/0.1.1/chrome-0.1.1.zip'
         >
           Chrome Extension
         </a>
@@ -96,15 +115,15 @@ const WalletInfo = () => {
       <p>
         <a
           className={'underline'}
-          href={'https://github.com/Nintondo/extension/releases/download/0.1.0/firefox-0.1.0.xpi'}
+          href={'https://github.com/Nintondo/extension/releases/download/0.1.1/firefox-0.1.1.xpi'}
         >
           Firefox Extension
         </a>
       </p>
-      <br /> <br />
+      <br />
       <p>
         Ready to embark on this enchanting crypto adventure? Download Nintondo Wallet for Bells and
-        turn your cryptocurrency experience into an idyllic escapade. Let's make our financial
+        turn your cryptocurrency experience into an idyllic escapade. Let`s make our financial
         journey not just profitable, but also delightful!
       </p>
       <p>
@@ -113,7 +132,47 @@ const WalletInfo = () => {
         portfolio.
       </p>
       <br />
-      <p>Happy Bell Hunting! 🛎️</p>
+      <p className={'mb-[20px]'}>Happy Bell Hunting! 🛎️</p>
+      <div className='grid grid-cols-3 gap-4'>
+        {walletImages.map((image, index) => (
+          <img
+            key={index}
+            className='w-full h-auto cursor-pointer'
+            src={image}
+            alt={`Image ${index + 1}`}
+            onClick={() => handleImageClick(image)}
+          />
+        ))}
+      </div>
+      {modalImage && (
+        <div className='fixed inset-0 flex items-center z-50 bg-black bg-opacity-50 backdrop-blur-md'>
+          <div className='p-5 relative rounded-lg max-w-lg mx-auto'>
+            <button
+              className='absolute top-1/2 left-1 bg-white rounded-full p-[5px]'
+              onClick={() => changeImage('previous')}
+            >
+              <ArrowLeft />
+            </button>
+            <img
+              className='w-full h-auto'
+              src={modalImage}
+              alt='Modal'
+            />
+            <button
+              className='absolute top-1/2 right-1 bg-white rounded-full p-[5px]'
+              onClick={() => changeImage('next')}
+            >
+              <ArrowRight />
+            </button>
+            <button
+              className='absolute top-0 right-0 m-2 bg-white rounded-full p-[5px]'
+              onClick={closeModal}
+            >
+              <Exit />
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
